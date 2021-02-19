@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Pacifico', cursive;
+    background-color:lightgray;
+    font-size: large;
+}
+.search{
+    padding: 5px 5px;;
+}
+.btn{
+   background-color: teal; 
+   border: none;
+   color: whitesmoke;
+   padding: 5px 25px;
+}
+.center {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: auto !important;
+    width: 26% !important;
+    text-align: center !important;
+    border: none;
+  }
+  img{
+      height: 300px;
+      width: 200px;
+      border: 1px solid black;
+      margin:5px;
+      align-content:center;
+  }
+nav{
+    background: grey;
+    padding: 5px 20px;
+}
+ul{
+    list-style-type:none;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.menu li{
+    font-size: 16px;
+    padding: 10px 5px;
+}
+.menu li a{
+    display:block;
+}
+
+.logo a{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toggle{
+	order:1;
+}
+
+.item{
+    width: 100%;
+    text-align:center;
+    order:2;
+    display: none;
+    font-weight: bold;
+}
+
+.item.active{
+    display:block;
+}
+.form-inline.active{
+    display: block;
+}
+
+.toggle{
+    cursor:pointer
+}
+
+.bars{
+    background: #999;
+    display:inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+
+}
+
+.bars::before,.bars::after{
+    background: #999;
+    content:"" ;
+    display:inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+
+}
+
+.bars::before{
+    top:5px;
+}
+.bars::after{
+    top:-5px;
+}
+
+@media all and (min-width:468px) {
+    .menu{
+        justify-content:center
+    }
+    .logo
+    {flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order:1;
+        display:block
+    }
+
+    .toggle{
+        order: 2;
+    }
+}
+
+@media all and (min-width:768px){
+    .item{
+        display: block;
+        width:auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo{
+        order:0;
+    }
+    .item{
+        order: 0;
+    }
+.button{
+    order:2;
+}
+    .menu li{
+        padding:15px 10px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
