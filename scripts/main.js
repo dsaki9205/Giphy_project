@@ -6,7 +6,7 @@ const gifForm = $("#gif-form");
 gifForm.submit(e => {
   e.preventDefault();
   const searchTerm = $(".search").val();
-  const url = `https://api.giphy.com/v1/gifs/search?&q=${searchTerm}g&limit=30&api_key=cXppniS57sjO0pzHAogffb7C9OYCxHFp`;
+  const url = `https://api.giphy.com/v1/gifs/search?&q=${searchTerm}g&limit=30&api_key=`; //api key has been taken out for saftey
   $.get(url)
     .done(resp => {
       showGiphs(resp.data.slice(0, 40));
